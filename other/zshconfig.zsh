@@ -23,21 +23,17 @@ alias apt='man pacman'
 alias apt-get='man pacman'
 alias jctl="journalctl -p 3 -xb"
 alias cmdhist='CMD=$(history -i | tac | fzf | sed "s/.*:..  //"); sleep 0.1 && wtype $CMD'
-alias tipme='~/.config/sdgos/tips/tips.sh'
-alias alltips='cat ~/.config/sdgos/tips/tips.list | fzf'
-alias cowtip='cowsay -r $(shuf -n 1 ~/.config/sdgos/tips/tips.list) | lolcat'
-alias fetch='~/.config/sdgos/fastfetch/fetch.sh'
-alias fetchconf='~/.config/sdgos/fastfetch/fetch-conf.sh'
-alias yurifetch='fastfetch -l ~/Documents/yuri.png'
+alias tipme='~/.local/SDG-TIPS/sdg-tips random'
+alias alltips='~/.local/SDG-TIPS/sdg-tips list'
+alias cowtip='cowsay -r $(~/.local/SDG-TIPS/sdg-tips random) | lolcat'
+
 
 ## tools
-alias pacgui=~/.config/sdgos/tuis/pkg-install.sh
-alias aurgui=~/.config/sdgos/tuis/aur-install.sh
-alias git-projects=~/.config/sdgos/tuis/project.select.sh
-alias mangoconf=~/.config/sdgos/mango-config.sh
-alias documentation=~/.config/sdgos/tuis/documentation.sh
-alias tldrtui=~/.config/sdgos/help/cmd-help.sh
-alias helptui=~/.config/sdgos/help/help.sh
+alias git-projects=~/.local/SDG-UTILS/project-select.sh
+alias mangoconf=~/.local/SDG-MANGO-CONF/mango-config.sh
+alias documentation=~/.local/SDG-UTILS/documentation.sh
+alias tldrtui=~/.local/SDG-HELP/cmd-help.sh
+alias helptui=~/.local/SDG-HELP/help.sh
 
 export EDITOR=micro
 export IMAGEPROGRAM='satty --filename'
