@@ -12,7 +12,7 @@ unipkg install any zoxide
 unipkg install any eza
 
 # set working directory
-WORKDIR=/home/$(whoami)/.cache/SDG-PKG/sdg-mango
+WORKDIR=/home/$(whoami)/.cache/SDG-PKG/sdg-term
 
 
 # move old config
