@@ -1,47 +1,66 @@
 # SDG-TERM Documentation Plan
 
 ## Current Status
-One doc file exists (`config/ghostty/README.md`, Ghostty config documentation). No docs/ or tips/ directories are populated.
+Docs directory is empty (only `.placeholder`). Tips directory is empty (only `.placeholder`).
+One config README exists (`config/ghostty/README.md`, 22 lines).
+
+## Source-Verified Inventory
+**Components:**
+- Ghostty terminal config: dankcolors/noctalia themes, 50% opacity, 1GB scrollback, Alt+Arrow pane splits, Ctrl+R hot-reload
+- Startup display: runs `sdgfetch && echo && sdgtip random` on every new terminal
+- Zsh config (oh-my-zsh): plugins (git/fzf/extract), syntax highlighting, autosuggestions, history search, pkgfile command-not-found
+- Powerlevel10k rainbow prompt: OS icon, dir, git status (left), 50+ segments (right), transient prompt, instant prompt
+- eza aliases: ls, la, ll, lt, l.
+- zoxide: smart cd replacement
+- fzf integration: file search, cmdhist (command history searcher)
+- SDG-OS integration aliases: tipme, alltips, cowtip (→SDG-TIPS), tldrtui (→SDG-HELP), helptui (→SDG-HELP), documentation (→SDG-UTILS), git-projects (→SDG-UTILS), mangoconf (→SDG-MANGO-CONF)
+- plz() sudo shortcut function
+- Filetype associations in zshconfig.zsh
+
+### Known Issues (document in troubleshooting)
+- Hardcoded `/home/$(whoami)/` paths instead of `$HOME` in zshconfig.zsh
+- Ghostty config file named `config.ghostty` but must be `config` when deployed
+- No detect.sh script exists
 
 ## Docs System (`docs/`)
 **Deploy location**: `~/.local/docs/SDG-TERM/`
 
-### Existing Docs
-| File | Topic |
-|------|-------|
-| config/ghostty/README.md | Ghostty config: features, keybinds, DMS theme integration, notes |
-
 ### Planned Doc Topics
 | # | Topic | Description | Priority |
 |---|-------|-------------|----------|
-| 1 | Terminal Setup | What SDG-TERM configures: Ghostty, Zsh, Powerlevel10k | High |
-| 2 | Ghostty Configuration | Theme (dankcolors), opacity, keybinds, shell integration, startup command | High |
-| 3 | Zsh Configuration | oh-my-zsh plugins, aliases (eza, fzf, zoxide), custom functions | High |
-| 4 | Powerlevel10k Prompt | Prompt segments, transient prompt, customization | Medium |
-| 5 | Cross-Package Integration | How SDG-FETCH, SDG-TIPS, SDG-UTILS, SDG-MANGO-HELPERS aliases work | High |
-| 6 | Troubleshooting | Common issues: shell not starting, prompt broken, missing fonts | Medium |
+| 1 | Terminal Setup | What SDG-TERM configures: Ghostty + Zsh + P10k, installation | High |
+| 2 | Ghostty Configuration | Themes, opacity, keybinds, startup command, shell integration | High |
+| 3 | Zsh Configuration | oh-my-zsh plugins, aliases (eza, zoxide, fzf), custom functions | High |
+| 4 | Powerlevel10k Prompt | Segments, transient prompt, customization options | Medium |
+| 5 | Shell Aliases and SDG-OS Integration | All aliases to other packages: tipme, tldrtui, helptui, documentation, git-projects, mangoconf, plz, cmdhist | High |
+| 6 | Troubleshooting | Common issues: hardcoded home paths, ghostty config filename, detect.sh missing | Medium |
 
-### Implementation
-- Create `docs/SDG-TERM/` directory with numbered markdown files
-- Follow SDG-DOCS naming convention
-- Register in `install.sh` for deployment to `~/.local/docs/`
+### Existing Content
+| File | Notes |
+|------|-------|
+| `config/ghostty/README.md` | 22 lines — brief Ghostty features overview. Absorb into topic #2 |
+| `README.md` (root) | 45 lines — feature summary. Source material |
+| `analysis.md` | Known issues documentation — source for topic #6 |
 
 ## Tips System (`tips/`)
 **Deploy location**: `~/.local/tips/SDG-TERM/`
 
 ### Planned Tips
-| # | Tip | Description | Priority |
-|---|-----|-------------|----------|
-| 1 | Terminal startup | Terminal shows sdgfetch + sdgtip on open | High |
-| 2 | Quick tip | Type `tipme` for a random tip | High |
-| 3 | Eza aliases | `ls`, `la`, `ll`, `lt` — enhanced file listing with icons | High |
-| 4 | Zoxide navigation | `cd <partial>` — jump to frequently-used directories | High |
-| 5 | Fuzzy find | `find` — fuzzy file search with bat preview | Medium |
-| 6 | Sudo shortcut | `plz` — re-run last command with sudo | Medium |
-| 7 | Ghostty splits | Alt+Arrow — create and navigate split panes | Medium |
-| 8 | History search | `cmdhist` — search command history with fzf | Low |
-| 9 | Reload config | Ctrl+R in Ghostty — reload terminal config | Low |
+| # | Tip | Priority |
+|---|-----|----------|
+| 1 | Terminal shows sdgfetch + sdgtip on every new window | High |
+| 2 | Quick tip with `tipme` from any terminal | High |
+| 3 | eza aliases: ls, la, ll, lt for colorful listings | High |
+| 4 | zoxide: cd <partial> jumps to any directory | High |
+| 5 | fzf file search with `find` and bat preview | Medium |
+| 6 | plz re-runs last command with sudo | Medium |
+| 7 | Ghostty splits with Alt+Arrow | Medium |
+| 8 | cmdhist searches command history with fzf | Low |
+| 9 | Ctrl+R reloads Ghostty config | Low |
 
-### Implementation
-- Create `tips/SDG-TERM/tips.list` with the above tips
-- Register in `install.sh` for deployment to `~/.local/tips/`
+## Implementation Notes
+- Topic #5 was "Cross-Package Integration" — renamed to "Shell Aliases and SDG-OS Integration" to accurately describe the actual aliases
+- All docs go in `nn-topic-name.md` format under `docs/SDG-TERM/`
+- Tips in `tips/SDG-TERM/tips.list`
+- The `config/ghostty/README.md` should be expanded and folded into topic #2
+- Source for aliases: `other/zshconfig.zsh` and `other/zshrc`
