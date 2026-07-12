@@ -4,7 +4,7 @@ background-opacity = 0.5
 
 command = /bin/zsh
 
-initial-command = /bin/zsh -c sdgfetch && echo "" && sdgtip random && zsh 
+initial-command = command -v sdgfetch >/dev/null 2>&1 && sdgfetch || true; echo "" && command -v sdgtip >/dev/null && sdgtip random || true; zsh 
 
 scrollback-limit = 1048576000
 
