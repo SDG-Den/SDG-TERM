@@ -1,0 +1,11 @@
+sdgfetch and sdgtip run on every new terminal window
+tipme shows a random SDG-OS tip from any terminal
+eza aliases: ls, la, ll, lt give colorful directory listings
+zoxide lets you cd <partial> to jump to any directory
+find uses fzf with bat preview for fuzzy file search
+plz re-runs the last command with sudo
+Ghostty pane splits with Alt+Arrow keys
+cmdhist searches your command history with fzf
+Ctrl+R reloads the Ghostty config
+microfind opens a fuzzy-selected file in micro editor
+cowtip shows a random tip with cowsay and lolcat
