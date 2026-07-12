@@ -1,7 +1,7 @@
 Package Name: sdg-term
 Descriptive Name: SDG Terminal & Shell Configuration
-Source: https://git.sdgcloud.nl/SDGDen/SDG-TERM
-Maintainer: SDGDen <sdgden@sdgcloud.nl>
+Source: https://github.com/SDG-Den/SDG-TERM
+Maintainer: SDGDen
 Version:0.2
 
 Dependencies: 
