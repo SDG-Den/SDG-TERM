@@ -15,7 +15,8 @@ SDG-TERM configures the complete terminal experience for SDG-OS. It sets up Ghos
 - **eza aliases** — `ls`, `la`, `ll`, `lt`, `l.` with icons and colors
 - **zoxide** — smart directory jumping (`cd <partial>`)
 - **fzf integration** — `find` fuzzy file search, `cmdhist` history searcher
-- **SDG-OS aliases** — `tipme`, `alltips`, `cowtip`, `tldrtui`, `helptui`, `documentation`, `git-projects`, `mangoconf`
+- **SDG-OS aliases** — `tipme`, `alltips`, `cowtip`
+  - `tldrtui`, `helptui`, `documentation`, `git-projects`, `mangoconf` are old aliases (pending symlink conversion)
 - **Sudo shortcut** — `plz` re-runs last command with sudo
 
 ## Installation

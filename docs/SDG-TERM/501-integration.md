@@ -1,6 +1,6 @@
 # Shell Aliases and SDG-OS Integration
 
-SDG-TERM bridges all SDG-OS tools into the shell with convenient aliases.
+SDG-TERM bridges SDG-OS tools into the shell with convenient aliases. Note that some of these are old aliases pending conversion to `/usr/bin/` symlinks.
 
 ## SDG-TIPS Integration
 
@@ -10,21 +10,21 @@ SDG-TERM bridges all SDG-OS tools into the shell with convenient aliases.
 | `alltips` | `~/.local/SDG-TIPS/sdg-tips list` | Browse all tips via fzf |
 | `cowtip` | `cowsay -r $(sdg-tips random) \| lolcat` | Random tip with cowsay + lolcat |
 
-## SDG-HELP Integration
+## SDG-HELP Integration (old aliases, pending symlink conversion)
 
 | Alias | Command | Description |
 |-------|---------|-------------|
 | `tldrtui` | `~/.local/SDG-HELP/cmd-help.sh` | Browse command help |
 | `helptui` | `~/.local/SDG-HELP/help.sh` | Browse SDG-OS topics |
 
-## SDG-UTILS Integration
+## SDG-UTILS Integration (old aliases, pending symlink conversion)
 
 | Alias | Command | Description |
 |-------|---------|-------------|
 | `documentation` | `~/.local/SDG-UTILS/documentation.sh` | Open doc browser |
 | `git-projects` | `~/.local/SDG-UTILS/project-select.sh` | Browse/open git projects |
 
-## SDG-MANGO-HELPERS Integration
+## SDG-MANGO-HELPERS Integration (old alias, pending symlink conversion)
 
 | Alias | Command | Description |
 |-------|---------|-------------|

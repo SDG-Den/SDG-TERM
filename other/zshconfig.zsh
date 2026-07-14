@@ -28,7 +28,7 @@ alias alltips='~/.local/SDG-TIPS/sdg-tips list'
 alias cowtip='cowsay -r $(~/.local/SDG-TIPS/sdg-tips random) | lolcat'
 
 
-## tools
+## tools (old aliases pending symlink conversion)
 alias git-projects=~/.local/SDG-UTILS/project-select.sh
 alias mangoconf=~/.local/SDG-MANGO-CONF/mango-config.sh
 alias documentation=~/.local/SDG-UTILS/documentation.sh

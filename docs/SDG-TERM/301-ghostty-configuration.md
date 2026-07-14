@@ -48,4 +48,4 @@ This displays system info (SDG-FETCH), a random tip from SDG-TIPS, then drops in
 
 ## Config File
 
-The configuration file is located at `~/.config/ghostty/config`. In this repository, the file is named `config.ghostty` to avoid editor conflicts, but it must be named `config` when deployed.
+The configuration file is located at `~/.config/ghostty/config`. In this repository, the file is named `config.ghostty` to avoid editor conflicts.

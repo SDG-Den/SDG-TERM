@@ -58,17 +58,17 @@ The following plugins are enabled:
 | `c` | Clear screen |
 | `make` | `make -j$(nproc)` — parallel builds |
 | `ninja` / `n` | `ninja -j$(nproc)` — parallel builds |
-| `update` | `sudo pacman -Syu` |
-| `rmpkg` | `sudo pacman -Rsn` — remove package |
-| `cleanch` | `sudo pacman -Scc` — clean cache |
-| `fixpacman` | Remove pacman lock file |
+| `update` | `sudo pacman -Syu` (Arch-specific) |
+| `rmpkg` | `sudo pacman -Rsn` — remove package (Arch-specific) |
+| `cleanch` | `sudo pacman -Scc` — clean cache (Arch-specific) |
+| `fixpacman` | Remove pacman lock file (Arch-specific) |
 | `please` | `sudo` |
 | `tb` | Paste to termbin.com |
-| `cleanup` | Remove orphaned packages |
-| `rip` | List recently installed packages |
-| `jctl` | `journalctl -p 3 -xb` — error messages |
+| `cleanup` | Remove orphaned packages (Arch-specific) |
+| `rip` | List recently installed packages (Arch-specific) |
+| `jctl` | `journalctl -p 3 -xb` — error messages (Arch-specific) |
 | `apt` / `apt-get` | `man pacman` — help for Arch newcomers |
-| `gitpkg` | Count installed -git packages |
+| `gitpkg` | Count installed -git packages (Arch-specific) |
 | `dir` / `vdir` | Colorized directory listing |
 | `grep` / `fgrep` / `egrep` | Colorized grep |
 
