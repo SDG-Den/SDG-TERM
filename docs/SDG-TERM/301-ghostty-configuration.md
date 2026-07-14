@@ -42,7 +42,7 @@ This displays system info (SDG-FETCH), a random tip from SDG-TIPS, then drops in
 ## Other Settings
 
 - **Shell integration**: Zsh (`shell-integration = zsh`)
-- **Scrollback**: ~1GB (`scrollback-limit = 1048576000`)
+- **Scrollback**: Configurable limit (`scrollback-limit`)
 - **Focus follows mouse**: Enabled
 - **Working directory**: New tabs/splits inherit the current directory
 
