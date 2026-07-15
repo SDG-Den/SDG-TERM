@@ -4,14 +4,9 @@ SDG-TERM provides a pre-configured Ghostty terminal emulator setup with dark the
 
 ## Theme
 
-Two dark themes are included in `~/.config/ghostty/themes/`:
+The `dankcolors` theme is linked to the central SDG-OS theming engine and automatically adapts to the active OS theme (preset, flat-color, matugen-generated, etc.). The theme file lives at `~/.config/ghostty/themes/dankcolors`.
 
-| Theme | Background | Foreground | Style |
-|-------|-----------|------------|-------|
-| dankcolors | #0d141c | #dde3ee | Cool blue/pink/green |
-| noctalia | #1c1e1e | #fffcf8 | Warm orange/green/blue |
-
-The active theme is set in the config file. Default is `dankcolors`.
+The active theme is set in the config file: `theme = dankcolors`.
 
 ## Appearance
 
@@ -21,13 +16,13 @@ The active theme is set in the config file. Default is `dankcolors`.
 
 ## Startup
 
-Every new Ghostty window runs:
+Every new Ghostty window runs an `initial-command` that displays system info and a random tip before starting an interactive Zsh session:
 
 ```bash
-/bin/zsh -c "sdgfetch && echo '' && sdgtip random && zsh"
+/bin/zsh -c "command -v sdgfetch >/dev/null 2>&1 && sdgfetch || true; echo '' && command -v sdgtip >/dev/null && sdgtip random || true; zsh"
 ```
 
-This displays system info (SDG-FETCH), a random tip from SDG-TIPS, then drops into an interactive Zsh session.
+Each command is guarded with `command -v ... >/dev/null 2>&1 && ... || true`, so missing tools don't cause errors — the terminal always drops into Zsh cleanly.
 
 ## Keybindings
 
@@ -44,8 +39,10 @@ This displays system info (SDG-FETCH), a random tip from SDG-TIPS, then drops in
 - **Shell integration**: Zsh (`shell-integration = zsh`)
 - **Scrollback**: Configurable limit (`scrollback-limit`)
 - **Focus follows mouse**: Enabled
-- **Working directory**: New tabs/splits inherit the current directory
+- **Working directory**: See [102-usage](102-usage.md) for split vs new-window behavior
 
 ## Config File
 
 The configuration file is located at `~/.config/ghostty/config`. In this repository, the file is named `config.ghostty` to avoid editor conflicts.
+
+After editing, press `Ctrl+R` to reload the configuration without restarting.

@@ -8,7 +8,7 @@ SDG-TERM configures the complete terminal experience for SDG-OS. It sets up Ghos
 
 ## Features
 
-- **Ghostty terminal** — dark theme (dankcolors/noctalia), 50% opacity, pane splits (Alt+Arrow), config hot-reload (Ctrl+R)
+- **Ghostty terminal** — auto-adapting dark theme, 50% opacity, pane splits (Alt+Arrow), config hot-reload (Ctrl+R)
 - **Startup display** — runs `sdgfetch` + `sdgtip random` on every new terminal
 - **Zsh config** — oh-my-zsh (git/fzf/extract), syntax highlighting, autosuggestions, history search
 - **Powerlevel10k** — rainbow theme, transient prompt, 50+ status segments
