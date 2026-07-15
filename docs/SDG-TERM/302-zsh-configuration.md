@@ -58,19 +58,26 @@ The following plugins are enabled:
 | `c` | Clear screen |
 | `make` | `make -j$(nproc)` — parallel builds |
 | `ninja` / `n` | `ninja -j$(nproc)` — parallel builds |
-| `update` | `sudo pacman -Syu` (Arch-specific) |
-| `rmpkg` | `sudo pacman -Rsn` — remove package (Arch-specific) |
-| `cleanch` | `sudo pacman -Scc` — clean cache (Arch-specific) |
-| `fixpacman` | Remove pacman lock file (Arch-specific) |
 | `please` | `sudo` |
 | `tb` | Paste to termbin.com |
-| `cleanup` | Remove orphaned packages (Arch-specific) |
-| `rip` | List recently installed packages (Arch-specific) |
-| `jctl` | `journalctl -p 3 -xb` — error messages (Arch-specific) |
-| `apt` / `apt-get` | `man pacman` — help for Arch newcomers |
-| `gitpkg` | Count installed -git packages (Arch-specific) |
+| `jctl` | `journalctl -p 3 -xb` — error messages |
 | `dir` / `vdir` | Colorized directory listing |
 | `grep` / `fgrep` / `egrep` | Colorized grep |
+
+### Distro-Specific Aliases
+
+Distro-specific package-management aliases are defined in `~/.distros.zsh`, sourced automatically from `~/.zshconfig.zsh`. They are set based on the `ID_LIKE` value in `/etc/os-release`:
+
+| Alias | Arch (`ID_LIKE=arch`) | Debian/Ubuntu | Fedora/RHEL |
+|-------|----------------------|---------------|-------------|
+| `update` | `sudo pacman -Syu` | `sudo apt update && sudo apt upgrade` | `sudo dnf update` |
+| `rmpkg` | `sudo pacman -Rsn` | `sudo apt remove` | `sudo dnf remove` |
+| `cleanch` | `sudo pacman -Scc` | `sudo apt autoremove && sudo apt autoclean` | `sudo dnf clean all` |
+| `gitpkg` | Count installed AUR -git packages | Count installed -git packages | Count installed -git packages |
+| `fixpacman` | Remove pacman lock file | — | — |
+| `cleanup` | Remove orphaned packages | — | — |
+| `rip` | List recently installed packages (expac) | — | — |
+| `apt` / `apt-get` | `man pacman` (help for newcomers) | `sudo apt` | — |
 
 ### Filetype Associations
 

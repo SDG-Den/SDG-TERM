@@ -31,5 +31,5 @@ SDG-TERM is also installed automatically as a dependency of SDG-MANGO-CORE.
 
 - **SDG-FETCH** — displayed on terminal startup
 - **SDG-TIPS** — random tips on startup, aliases (tipme/alltips/cowtip)
-- **SDG-UTIL-SCRIPTS** — aliases (tldrtui, helptui, documentation, git-projects)
+- **SDG-UTIL-SCRIPTS** — symlinks (tldrtui, documentation, git-projects)
 - **SDG-MANGO-HELPERS** — alias (mangoconf)

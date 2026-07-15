@@ -2,10 +2,10 @@
 ## command aliases
 alias find="fzf --layout=reverse --preview='bat {}'"
 alias microfind='micro $(pwd)/$(fzf --layout=reverse --preview="bat {}")'
-alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
-alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='eza -l --color=always --group-directories-first --icons'  # long format
-alias lt='eza -aT --level=4 --color=always --group-directories-first --icons' # tree listing
+alias ls='eza -al --color=always --group-directories-first --icons=always' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons=always'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
+alias lt='eza -aT --level=4 --color=always --group-directories-first --icons=always' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -17,23 +17,14 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias update='sudo pacman -Syu'
-alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'
-alias apt='man pacman'
-alias apt-get='man pacman'
-alias jctl="journalctl -p 3 -xb"
 alias cmdhist='CMD=$(history -i | tac | fzf | sed "s/.*:..  //"); sleep 0.1 && wtype $CMD'
 alias tipme='~/.local/SDG-TIPS/sdg-tips random'
 alias alltips='~/.local/SDG-TIPS/sdg-tips list'
 alias cowtip='cowsay -r $(~/.local/SDG-TIPS/sdg-tips random) | lolcat'
 
 
-## tools (old aliases pending symlink conversion)
-alias git-projects=~/.local/SDG-UTILS/project-select.sh
-alias mangoconf=~/.local/SDG-MANGO-CONF/mango-config.sh
-alias documentation=~/.local/SDG-UTILS/documentation.sh
-alias tldrtui=~/.local/SDG-HELP/cmd-help.sh
-alias helptui=~/.local/SDG-HELP/help.sh
+# Distro-specific package-management aliases
+[[ -f ~/.distros.zsh ]] && source ~/.distros.zsh
 
 export EDITOR=micro
 export IMAGEPROGRAM='satty --filename'
